@@ -1,0 +1,11 @@
+language: minimal
+sudo: required
+services:
+- docker
+before_script:
+- docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+script:
+- make push-tag
+env:
+  global:
+    secure: OQ2Pi+mUZAHLN+S3Hj123NxVw58Of7TApRDmx07SagnFi0X0+TPUwajEcD1JAgLMq/JM1vH6PHCvvYepxayLBGY7jIS2hvOVwJhygDLbpcOwsodeIkk/Mk/A3mygHVPzIKQxloLoGr95v4MN52I0wHgjyyuXmdiizXZM1xgN0j/CS78LweGt+TTv5xJZV6lA2EqxAE0AYjZk9NRU79/6ByXFJFeP5CYP8KWLkNlqlQkr35chKar4ayC9ewPayFFXEDqkRSI7mBz+nwz0S56RBFcKWm5VmhVZkFqabQrCnDUHBrK7KfMwrRT++yA1MuINopxrL3dl3HYPR7QSb5/EgtDq9ZW13kVTSyNiZaBDwluivc08RQKz5gq9BmUIr/QGYfYhiWqFPCFecLBNiLNTF6loq+QIjTxaxTHYpfuePV8R8k1duEzD4dua8c07Yw5TNSuZrhMlQYFjb5TbtLVAgPQxauFPr7gH+IpedhgIUjvvi432klmissAmR2i4vz0vV0JnWUadDBDZb8lMCRWE/iPZCHpe9zxVCD+31mx+CDWLv76nLVDmQALnbqLZF5r0xOfm0DdLF54QrzgGC/Z+YXN6Kdsv01yBlH96rkIS4Nbj9DtRfLEblJxM2GRcooCBXFfA7DFKFA7l9lIzz4czRAQP55Ia2ZiJKJ83XxhXQU8=
